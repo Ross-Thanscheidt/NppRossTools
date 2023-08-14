@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NppRossTools", "NppRossTools\NppRossTools.csproj", "{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Debug|x64.ActiveCfg = Debug|x64
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Debug|x64.Build.0 = Debug|x64
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Debug|x86.ActiveCfg = Debug|x86
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Debug|x86.Build.0 = Debug|x86
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Release|x64.ActiveCfg = Release|x64
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Release|x64.Build.0 = Release|x64
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Release|x86.ActiveCfg = Release|x86
+		{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B51C50FC-9CE5-422A-B32F-DF6AAD67FF02}
+	EndGlobalSection
+EndGlobal
