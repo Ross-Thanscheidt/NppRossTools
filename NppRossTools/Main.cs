@@ -70,20 +70,25 @@ namespace Kbg.NppPluginNET
             int currentYear = DateTime.Now.Year;
 
             int lineCount = editor.GetLineCount();
-            for (int lineNumber = 0; lineNumber < lineCount; lineNumber++)
+            if (lineCount > 0)
             {
-                editor.GotoLine(lineNumber);
-                string line = editor.GetLine(lineNumber);
-                MatchCollection matches = regex.Matches(line);
-                if (matches.Count > 0)
+                editor.BeginUndoAction();
+                for (int lineNumber = 0; lineNumber < lineCount; lineNumber++)
                 {
-                    int age = currentYear - int.Parse(matches[0].Groups[2].Value);
-                    string newLine = regex.Replace(line, $"$1({age} in {currentYear})$3");
-                    editor.SelectCurrentLine();
-                    editor.ReplaceSel(newLine);
+                    editor.GotoLine(lineNumber);
+                    string line = editor.GetLine(lineNumber);
+                    MatchCollection matches = regex.Matches(line);
+                    if (matches.Count > 0)
+                    {
+                        int age = currentYear - int.Parse(matches[0].Groups[2].Value);
+                        string newLine = regex.Replace(line, $"$1({age} in {currentYear})$3");
+                        editor.SelectCurrentLine();
+                        editor.ReplaceSel(newLine);
+                    }
                 }
+                editor.GotoLine(0);
+                editor.EndUndoAction();
             }
-            editor.GotoLine(0);
         }
 
     //    internal static void myDockableDialog()
