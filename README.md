@@ -2,6 +2,10 @@
 
 ## Tools
 
+- **Remove Trailing Spaces**
+
+  This will trim all spaces at the end of every line.
+
 - **Update Ages**
 
   This will update every line in the current document that starts with a birthdate (in `MM/dd/yyyy` format) that has `(# in yyyy)` somewhere on the line, which should reflect their age for that year.
