@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Kbg.NppPluginNET.PluginInfrastructure;
@@ -20,7 +21,8 @@ namespace Kbg.NppPluginNET
 
         internal static void CommandMenuInit()
         {
-            PluginBase.SetCommand(0, "Update Ages", UpdateAgesCommand, new ShortcutKey(false, false, false, Keys.None));
+            PluginBase.SetCommand(0, "Remove Trailing Spaces", RemoveTrailingSpaces, new ShortcutKey(false, false, false, Keys.None));
+            PluginBase.SetCommand(1, "Update Ages", UpdateAgesCommand, new ShortcutKey(false, false, false, Keys.None));
         }
 
         internal static void SetToolBarIcon()
@@ -31,6 +33,36 @@ namespace Kbg.NppPluginNET
         {
         }
 
+
+        internal static void RemoveTrailingSpaces()
+        {
+            int lineCount = editor.GetLineCount();
+            if (lineCount > 0)
+            {
+                editor.BeginUndoAction();
+                for (int lineNumber = 0; lineNumber < lineCount; lineNumber++)
+                {
+                    editor.GotoLine(lineNumber);
+                    string line = editor.GetLine(lineNumber);
+                    bool endHasLF = line.Length > 0 && line[line.Length - 1] == '\n';
+
+                    string newLine = line.TrimEnd();
+
+                    if (endHasLF)
+                    {
+                        newLine = string.Concat(newLine, '\n');
+                    }
+
+                    if (!string.Equals(line, newLine))
+                    {
+                        editor.SelectCurrentLine();
+                        editor.ReplaceSel(newLine);
+                    }
+                }
+                editor.GotoLine(0);
+                editor.EndUndoAction();
+            }
+        }
 
         internal static void UpdateAgesCommand()
         {
