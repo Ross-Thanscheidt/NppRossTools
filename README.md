@@ -30,10 +30,36 @@
   06/09/1961 Michael J. Fox (62 in 2023)
   ```
   
+- **Update Line Balances**
+
+  This will update the balance on each transaction line in the current document.
+  
+  For example, if you had a document like this:
+  
+  ```
+  Checking Account
+  
+  (-10.82) 06/11 Sonic
+  63.28 (-25.32) 06/03 Hobby Lobby
+  88.60 (-17.30) 06/01 Walmart
+  105.90 Balance
+  ```
+  
+  Then after running `Update Line Balances` the document should look like this:
+  
+  ```
+  Checking Account
+  
+  52.46 (-10.82) 06/11 Sonic
+  63.28 (-25.32) 06/03 Hobby Lobby
+  88.60 (-17.30) 06/01 Walmart
+  105.90 Balance
+  ```
+  
 ## Development Environment
 
   Notepad++ - v8.5.4 (64-bit)  
-  Visual Studio 2022 Preview - v17.8 Preview 1  
+  Visual Studio 2022 Preview - v17.11 Preview 2
   [NppPlugin .NET package for VS2019 and beyond - v0.95.00 (Jan 2021)](https://github.com/kbilsted/NotepadPlusPlusPluginPack.Net/releases/download/0.95.00/NppPlugin0.95.00.zip)  
 
   Building the project in Visual Studio should add (or update) `NppRossTools\NppRossTools.dll` under `C:\Program Files\Notepad++\plugins`, which will add `Ross Tools` under `Plugins` when you run Notepad++.  
