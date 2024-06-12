@@ -55,10 +55,32 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug-ARM64</OutputPath>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM64' ">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release-ARM64</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <PropertyGroup>
     <!-- Default values for debugging so it start correct version of Notepad++
          $(ProgramW6432) and $(MSBuildProgramFiles32) points to the 64 and 32 bit "Program Files" directories -->
     <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(Platform)'=='ARM64'">$(ProgramW6432)\Notepad++\notepad++.exe</StartProgram>
     <StartProgram Condition="'$(Platform)'=='x64'">$(ProgramW6432)\Notepad++\notepad++.exe</StartProgram>
     <StartProgram Condition="'$(Platform)'=='x86'">$(MSBuildProgramFiles32)\Notepad++\notepad++.exe</StartProgram>
   </PropertyGroup>
