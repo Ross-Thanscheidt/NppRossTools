@@ -113,21 +113,18 @@ namespace Kbg.NppPluginNET
                         }
                         else
                         {
-                            if (!currentBalance.HasValue)
+                            MatchCollection matches = regexBalance.Matches(line);
+                            if (matches.Count > 0)
                             {
-                                MatchCollection matches = regexBalance.Matches(line);
-                                if (matches.Count > 0)
+                                if (decimal.TryParse(regexBalance.Replace(line, "${balance}"), out var balance))
                                 {
-                                    if (decimal.TryParse(regexBalance.Replace(line, "${balance}"), out var balance))
-                                    {
-                                        currentBalance = balance;
-                                    }
+                                    currentBalance = balance;
                                 }
                             }
 
                             if (currentBalance.HasValue)
                             {
-                                MatchCollection matches = regexTransaction.Matches(line);
+                                matches = regexTransaction.Matches(line);
                                 if (matches.Count > 0)
                                 {
                                     if (decimal.TryParse(regexTransaction.Replace(line, "${transamount}"), out var transAmount))
