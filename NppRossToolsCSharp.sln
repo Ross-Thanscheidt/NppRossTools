@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34004.107
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NppRossTools", "NppRossTools\NppRossTools.csproj", "{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NppRossToolsCSharp", "NppRossTools\NppRossToolsCSharp.csproj", "{9F8EB43E-1D7D-4D27-9509-42FDC6A5E00F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{58F895A6-00A3-43FE-9FE7-9B09A503D2DC}"
 	ProjectSection(SolutionItems) = preProject

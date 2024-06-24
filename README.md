@@ -1,4 +1,4 @@
-# NppRossTools - A C# Notepad++ Plugin
+# NppRossToolsCSharp - A Notepad++ Plugin written in C#
 
 ## Tools
 
