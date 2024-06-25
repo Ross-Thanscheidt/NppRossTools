@@ -1,6 +1,6 @@
-# NppRossToolsCSharp - A Notepad++ Plugin written in C#
+# Ross Tools Plugin for Notepad++
 
-## Tools
+## Ross Tools
 
 - **Remove Trailing Spaces**
 
@@ -58,8 +58,8 @@
   
 ## Development Environment
 
-  Notepad++ - v8.5.4 (64-bit)  
-  Visual Studio 2022 Preview - v17.11 Preview 2  
+  Visual Studio 2022 Preview - v17.11 Preview 2.1  
+  Notepad++ - v8.6.7 (64-bit)  
   [NppPlugin .NET package for VS2019 and beyond - v0.95.00 (Jan 2021)](https://github.com/kbilsted/NotepadPlusPlusPluginPack.Net/releases/download/0.95.00/NppPlugin0.95.00.zip)  
 
   Building the project in Visual Studio should add (or update) `NppRossTools\NppRossTools.dll` under `C:\Program Files\Notepad++\plugins`, which will add `Ross Tools` under `Plugins` when you run Notepad++.  
