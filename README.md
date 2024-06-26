@@ -64,7 +64,17 @@
 
   Building the project in Visual Studio should add (or update) `NppRossTools\NppRossTools.dll` under `C:\Program Files\Notepad++\plugins`, which will add `Ross Tools` under `Plugins` when you run Notepad++.  
 
+## Disclaimer
+
+  These tools will not likely be useful to anyone besides myself, which is why I called it Ross Tools, but I have it as a [public repository](https://github.com/Ross-Thanscheidt/NppRossToolsCSharp) in case it helps anyone else with developing their own Notepad++ plugins.
+
+  Because I am not able to compile this plugin into an ARM64 DLL, I cannot use it in Notepad++ on my Windows 10 VM running in Parallels on my MacBook that has an Apple Silicon M1 processor.
+  For this reason I have created a [C++ version of this Notepad++ Plugin](https://github.com/Ross-Thanscheidt/NppRossToolsCpp).
+
+  Any further updates will likely be done in the [C++ version](https://github.com/Ross-Thanscheidt/NppRossToolsCpp) and not in this [C# version](https://github.com/Ross-Thanscheidt/NppRossToolsCSharp).
+
 ## References
 
   https://npp-user-manual.org/docs/plugins/#how-to-develop-a-plugin  
   https://github.com/kbilsted/NotepadPlusPlusPluginPack.Net  
+  https://github.com/molsonkiko/NppCSharpPluginPack
